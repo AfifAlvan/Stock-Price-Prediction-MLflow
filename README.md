@@ -59,6 +59,10 @@ Script akan secara otomatis:
 | **LightGBM (Tuned)**       | 888.73   | 719.48   | -0.8925 |
 
 
+<img width="1000" height="500" alt="linear vs actual test" src="https://github.com/user-attachments/assets/1dacab33-b8ae-481f-9b4d-9357d4b5201c" />
+
+
+
 > 📌 **Catatan:**
 >
 > ✅ Linear Regression menghasilkan performa terbaik dan paling stabil antara data train dan test.
