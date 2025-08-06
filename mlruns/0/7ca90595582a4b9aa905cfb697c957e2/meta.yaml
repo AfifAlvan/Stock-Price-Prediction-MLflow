@@ -1,0 +1,15 @@
+artifact_uri: file:///c:/Test%20Kerja/Avows%20Technologies/mlruns/0/7ca90595582a4b9aa905cfb697c957e2/artifacts
+deleted_time: 1754507330632
+end_time: 1754481605132
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: deleted
+run_id: 7ca90595582a4b9aa905cfb697c957e2
+run_name: XGBoost
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1754481602319
+status: 3
+tags: []
+user_id: afifa

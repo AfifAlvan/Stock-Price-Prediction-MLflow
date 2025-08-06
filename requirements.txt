@@ -1,0 +1,16 @@
+# Core
+numpy==2.2.6
+pandas==2.2.3
+scikit-learn==1.7.1
+mlflow==3.2.0
+
+# Visualization
+matplotlib==3.10.3
+mplfinance==0.12.10b0
+
+# Data Download
+yfinance==0.2.65
+
+# Modeling
+xgboost==3.0.3
+lightgbm==4.6.0

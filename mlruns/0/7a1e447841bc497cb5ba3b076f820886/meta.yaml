@@ -1,0 +1,15 @@
+artifact_uri: file:///c:/Test%20Kerja/Avows%20Technologies/mlruns/0/7a1e447841bc497cb5ba3b076f820886/artifacts
+deleted_time: 1754507330520
+end_time: 1754498927615
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: deleted
+run_id: 7a1e447841bc497cb5ba3b076f820886
+run_name: Tuning_XGBoost
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1754498923893
+status: 3
+tags: []
+user_id: afifa

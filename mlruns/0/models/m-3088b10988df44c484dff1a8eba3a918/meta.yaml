@@ -1,0 +1,10 @@
+artifact_location: file:///c:/Test%20Kerja/Avows%20Technologies/mlruns/0/models/m-3088b10988df44c484dff1a8eba3a918/artifacts
+creation_timestamp: 1754500167393
+experiment_id: '0'
+last_updated_timestamp: 1754500170280
+model_id: m-3088b10988df44c484dff1a8eba3a918
+model_type: null
+name: xgboost_tuned_model
+source_run_id: 938494c9004b419aae82c79573236d8d
+status: 2
+status_message: null

@@ -1,0 +1,10 @@
+artifact_location: file:///c:/Test%20Kerja/Avows%20Technologies/mlruns/0/models/m-585fe075286d459782770d90420ef7c1/artifacts
+creation_timestamp: 1754481689032
+experiment_id: '0'
+last_updated_timestamp: 1754481691048
+model_id: m-585fe075286d459782770d90420ef7c1
+model_type: null
+name: lightgbm_model
+source_run_id: 5ea109b1ed4441f5996a12d063c81d7f
+status: 2
+status_message: null

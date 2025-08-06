@@ -1,0 +1,14 @@
+artifact_uri: file:///c:/Test%20Kerja/Avows%20Technologies/mlruns/0/506a2c15d7484d3d9299c9ac1347b4d6/artifacts
+end_time: 1754507208502
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 506a2c15d7484d3d9299c9ac1347b4d6
+run_name: Tuning_LightGBM
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1754507205822
+status: 3
+tags: []
+user_id: afifa

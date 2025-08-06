@@ -1,0 +1,15 @@
+artifact_uri: file:///c:/Test%20Kerja/Avows%20Technologies/mlruns/0/38a8d2421b6e4b41893b60b7cf0c6930/artifacts
+deleted_time: 1754507330573
+end_time: 1754482940082
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: deleted
+run_id: 38a8d2421b6e4b41893b60b7cf0c6930
+run_name: LinearRegression
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1754482940001
+status: 4
+tags: []
+user_id: afifa

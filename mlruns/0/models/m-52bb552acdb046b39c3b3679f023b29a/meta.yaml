@@ -1,0 +1,10 @@
+artifact_location: file:///c:/Test%20Kerja/Avows%20Technologies/mlruns/0/models/m-52bb552acdb046b39c3b3679f023b29a/artifacts
+creation_timestamp: 1754500743731
+experiment_id: '0'
+last_updated_timestamp: 1754500745990
+model_id: m-52bb552acdb046b39c3b3679f023b29a
+model_type: null
+name: ridge_model_tuned
+source_run_id: 066f0969870d496fa6db82fa2f19dd71
+status: 2
+status_message: null

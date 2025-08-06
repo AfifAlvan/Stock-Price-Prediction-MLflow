@@ -1,0 +1,10 @@
+artifact_location: file:///c:/Test%20Kerja/Avows%20Technologies/mlruns/0/models/m-c2924a47d416435787e30cac32dfd58a/artifacts
+creation_timestamp: 1754482741476
+experiment_id: '0'
+last_updated_timestamp: 1754482744021
+model_id: m-c2924a47d416435787e30cac32dfd58a
+model_type: null
+name: linear_regression_model
+source_run_id: c33bedf2a61f4f5d8c41b375972d0f5f
+status: 2
+status_message: null

@@ -1,0 +1,15 @@
+artifact_uri: file:///c:/Test%20Kerja/Avows%20Technologies/mlruns/0/fa4a0ef5c7a8456da73f4d4feed0c922/artifacts
+deleted_time: 1754507330641
+end_time: 1754463942744
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: deleted
+run_id: fa4a0ef5c7a8456da73f4d4feed0c922
+run_name: burly-panda-0
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1754463938248
+status: 3
+tags: []
+user_id: afifa

@@ -1,0 +1,15 @@
+artifact_uri: file:///c:/Test%20Kerja/Avows%20Technologies/mlruns/0/d7987ea81be741e7a299eafe74ce6fe2/artifacts
+deleted_time: 1754507330500
+end_time: 1754500625598
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: deleted
+run_id: d7987ea81be741e7a299eafe74ce6fe2
+run_name: Baseline_Naive_Forecast
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1754500625528
+status: 3
+tags: []
+user_id: afifa

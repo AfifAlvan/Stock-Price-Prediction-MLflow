@@ -1,0 +1,22 @@
+artifact_path: file:///c:/Test%20Kerja/Avows%20Technologies/mlruns/0/models/m-d4227de26c4942f8bf33ad6d03be1aa0/artifacts
+flavors:
+  python_function:
+    env:
+      conda: conda.yaml
+      virtualenv: python_env.yaml
+    loader_module: mlflow.sklearn
+    model_path: model.pkl
+    predict_fn: predict
+    python_version: 3.10.11
+  sklearn:
+    code: null
+    pickled_model: model.pkl
+    serialization_format: cloudpickle
+    sklearn_version: 1.7.1
+mlflow_version: 3.2.0
+model_id: m-d4227de26c4942f8bf33ad6d03be1aa0
+model_size_bytes: 727
+model_uuid: m-d4227de26c4942f8bf33ad6d03be1aa0
+prompts: null
+run_id: 8f73d61ddc434d579b1f69f360fa1ff5
+utc_time_created: '2025-08-06 13:11:08.447220'

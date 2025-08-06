@@ -1,0 +1,10 @@
+artifact_location: file:///c:/Test%20Kerja/Avows%20Technologies/mlruns/0/models/m-cf36e58622394032a59e1b1cf122bdf0/artifacts
+creation_timestamp: 1754397910433
+experiment_id: '0'
+last_updated_timestamp: 1754397919247
+model_id: m-cf36e58622394032a59e1b1cf122bdf0
+model_type: null
+name: model
+source_run_id: cc6b25b6f354491a8274994b81238200
+status: 2
+status_message: null

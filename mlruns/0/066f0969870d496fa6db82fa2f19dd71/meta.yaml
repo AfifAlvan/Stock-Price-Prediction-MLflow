@@ -1,0 +1,15 @@
+artifact_uri: file:///c:/Test%20Kerja/Avows%20Technologies/mlruns/0/066f0969870d496fa6db82fa2f19dd71/artifacts
+deleted_time: 1754507330502
+end_time: 1754500746000
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: deleted
+run_id: 066f0969870d496fa6db82fa2f19dd71
+run_name: Tuning_LinearRegression_Ridge
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1754500743630
+status: 3
+tags: []
+user_id: afifa
