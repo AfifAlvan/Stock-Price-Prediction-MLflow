@@ -45,7 +45,7 @@ Script akan secara otomatis:
 | Model                      | RMSE     | MAE      | R²      |
 |----------------------------|----------|----------|---------|
 | **Naive (Baseline)**       | 194.05   | 148.64   | 0.9098  |
-| **Linear Regression**      |          |          |         |
+| **Linear Regression** ✅     |          |          |         |
 |  Train                   | 101.95   | 74.99    | 0.9946  |
 |  Test                    | 146.69   | 110.22   | 0.9484  |
 | **Linear Regression (Tuned)** | 147.02   | 110.34   | 0.9482  |
@@ -59,8 +59,8 @@ Script akan secara otomatis:
 | **LightGBM (Tuned)**       | 888.73   | 719.48   | -0.8925 |
 
 > 📌 **Catatan:**
-> - **Linear Regression** memberikan hasil terbaik di test set (RMSE 146.69, R² 0.9484).
-> - Model boosting (XGBoost & LightGBM) mengalami **overfitting signifikan**, terutama setelah tuning.
+> ✅ Linear Regression menghasilkan performa terbaik dan stabil antara data train & test.
+> ⚠️ XGBoost & LightGBM menunjukkan overfitting setelah tuning, dibuktikan dari selisih besar antara train dan test..
 > - Model **naive** digunakan sebagai baseline pembanding.
 
 ---
