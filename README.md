@@ -58,11 +58,14 @@ Script akan secara otomatis:
 |  Test                    | 888.13   | 720.53   | -0.8900 |
 | **LightGBM (Tuned)**       | 888.73   | 719.48   | -0.8925 |
 
-> 📌 **Catatan:**
-> ✅ Linear Regression menghasilkan performa terbaik dan stabil antara data train & test.
-> ⚠️ XGBoost & LightGBM menunjukkan overfitting setelah tuning, dibuktikan dari selisih besar antara train dan test..
-> - Model **naive** digunakan sebagai baseline pembanding.
 
+> 📌 **Catatan:**
+>
+> ✅ Linear Regression menghasilkan performa terbaik dan paling stabil antara data train dan test.
+>
+> ⚠️ XGBoost dan LightGBM menunjukkan indikasi overfitting setelah tuning, terlihat dari selisih performa yang signifikan antara data train dan test.
+>
+>🔹 Model Naive (Baseline) digunakan sebagai acuan awal untuk membandingkan kinerja model-model lainnya.
 ---
 
 ## 🔮 Forecasting 30 Hari ke Depan
