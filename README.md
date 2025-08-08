@@ -1,4 +1,4 @@
-# Project Forecast Harga Saham
+# Stock Price Forcasting
 
 ## Deskripsi
 Project ini bertujuan untuk mengambil data harga saham dari Indonesia (contoh: BBCA.JK) menggunakan ```yfinance```, melakukan pembersihan data, ekstraksi fitur time series, pelatihan model machine learning untuk memprediksi harga closing price pada hari berikutnya **(next trading day)**, serta melakukan pemantauan eksperimen dan manajemen model dengan MLflow.
@@ -101,22 +101,21 @@ Fungsi splitter memastikan data valid tanpa data leakage.
 
 ## 📊 Evaluasi Model
 
-| Model                    | RMSE     | MAE      | R²      |
-|--------------------------|----------|----------|---------|
-| **Naive (Baseline)**     | 194.05   | 148.64   | 0.9098  |
-| **Linear Regression**    | 147.25	| 110.51	|0.9480     |
-| **Linear Regression (Tuning)** | 147.02   | 110.34   | 0.9482  |
-| **XGBoost**              |          |          |         |
-|  Train                 | 77.99    | 59.04    | 0.9969  |
-|  Test                  | 320.02   | 239.57   | 0.7546  |
-| **XGBoost (Tuning)**     | 892.39   | 721.57   | -0.9082 |
-| **LightGBM**             |          |          |         |
-|  Train                 | 43.34    | 33.14    | 0.9988  |
-|  Test                  | 888.13   | 720.53   | -0.8900 |
-| **LightGBM (Tuning)**    | 888.73   | 719.48   | -0.8925 |
+| Model                | RMSE    | MAE     | R²       |
+|----------------------|---------|---------|----------|
+| Naive (Baseline)     | 194.05  | 148.64  | 0.9098   |
+| Linear Regression    | 147.25  | 110.51  | 0.9480   |
+| XGBoost              | 866.55  | 699.77  | -0.7993  |
+| XGBoost (Tuning)     | 900.44  | 729.50  | -0.9427  |
+| LightGBM             | 883.11  | 715.66  | -0.8687  |
+| LightGBM (Tuning)    | 897.99  | 728.87  | -0.9322  |
+
+<img width="1000" height="500" alt="image" src="https://github.com/user-attachments/assets/af992333-1d1a-4570-a8f1-a300895ad61b" />
+
+
 
 > 📌 **Catatan**:
-> - **Linear Regression** memberikan hasil terbaik di test set (RMSE 146.69, R² 0.9484).
+> - **Linear Regression** memberikan hasil terbaik di test set (RMSE 147.25, MAE 110.51, R² 0.9480).
 > - Model boosting (XGBoost & LightGBM) mengalami **overfitting signifikan**, terutama setelah tuning.
 > - Model **naive** digunakan sebagai baseline pembanding.
 
@@ -127,6 +126,7 @@ Fungsi splitter memastikan data valid tanpa data leakage.
 * Model terbaik dipilih dan diregistrasi otomatis berdasarkan metrik RMSE terkecil.
 * Logging ini menjamin eksperimen dapat direproduksi dan mudah dievaluasi melalui UI MLflow.
 
+> Untuk hasil MLflow lebih lengkapnya bisa dilihat di **Documentation MLFlow Stock Forecasting.pdf**
 
 ## 📦 Dependencies Utama
 ```
@@ -140,3 +140,9 @@ lightgbm
 yfinance
 mplfinance
 ```
+
+### For more information
+* Linkedin : https://www.linkedin.com/in/afif-alvan/
+* Youtube  : https://www.youtube.com/@afifalvan
+* Medium   : https://medium.com/@afifalvan
+
