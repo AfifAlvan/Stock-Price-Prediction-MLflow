@@ -22,10 +22,12 @@ Project ini bertujuan untuk mengambil data harga saham dari Indonesia (contoh: B
    Data akan tersimpan di folder ```data/``` dengan nama file ```bbca.csv``` (atau ticker lain sesuai pengaturan).
     
 3. **Menjalankan Pipeline**
-  Jalankan pipeline lengkap berikut:
+   
+   Jalankan pipeline lengkap berikut:
+   
    ```bash
     python main.py
-    ```
+
 Pipeline ini akan melakukan:
 
 * Pembersihan data (cleaning)
@@ -42,7 +44,7 @@ Pipeline ini akan melakukan:
 
 ### 🧹 Data Cleaning
 
-* Langkah-langkah yang dilakukan:
+Langkah-langkah yang dilakukan:
 * Konversi kolom tanggal menjadi tipe datetime
 * Urutkan data berdasarkan tanggal
 * Hapus duplikat
