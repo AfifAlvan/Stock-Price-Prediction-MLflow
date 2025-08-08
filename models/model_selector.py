@@ -4,7 +4,6 @@ import mlflow
 import numpy as np
 import pandas as pd
 from models.naive import baseline_naive
-from models.linear_regression_tuning import tune_linear_regression
 from models.linear_regression import train_linear_regression
 from models.lightgbm_tuning import tune_lightgbm
 from models.lightgbm import train_lightgbm
@@ -50,9 +49,8 @@ def get_best_model(X_train, y_train, X_test, y_test, X_val=None, y_val=None):
     candidates.append(("Baseline Naive", None, result["rmse"], result["mae"], result["r2"]))
     print(f"   → RMSE: {result['rmse']:.4f}, MAE: {result['mae']:.4f}, R2: {result['r2']:.4f}")
 
-    # # ===== Linear Regression ====
+    # ===== Linear Regression ====
     print("🔍 Linear Regression...")
-
     # Train linear regression biasa dan langsung dapat hasil lengkap
     result_lr = train_linear_regression(X_train, y_train, X_test, y_test)
     model_lr = result_lr["model"]
@@ -75,30 +73,7 @@ def get_best_model(X_train, y_train, X_test, y_test, X_val=None, y_val=None):
     plot_actual_vs_predicted(y_test, y_pred_lr, "LinearRegression")
     # Simpan kandidat
     candidates.append(("LinearRegression", model_lr, rmse_lr, mae_lr, r2_lr))
-
-    # ===== Linear Regression Tuning=====
-    print("\n🔍 Training Linear Regression Tuning...")
-    model_lr_tuned, params_lr_tuned = tune_linear_regression(X_train, y_train)
-
-    y_pred_lr_tuned = model_lr_tuned.predict(X_test)
-    rmse_lr_tuned = np.sqrt(mean_squared_error(y_test, y_pred_lr_tuned))
-    mae_lr_tuned = mean_absolute_error(y_test, y_pred_lr_tuned)
-    r2_lr_tuned = r2_score(y_test, y_pred_lr_tuned)
-
-    # Log ke MLflow
-    mlflow.log_params({f"LR_Tuned_{k}": v for k, v in params_lr_tuned.items()})
-    mlflow.log_metrics({
-        "LR_Tuned_RMSE": rmse_lr_tuned,
-        "LR_Tuned_MAE": mae_lr_tuned,
-        "LR_Tuned_R2": r2_lr_tuned
-    })
-
-    # Plot hasil
-    plot_actual_vs_predicted(y_test, y_pred_lr_tuned, "Linear Regression Tuning")
-
-    # Simpan kandidat
-    candidates.append(("Linear Regression Tuning ", model_lr_tuned, rmse_lr_tuned, mae_lr_tuned, r2_lr_tuned))
-
+    print(f"   → RMSE: {result_lr['rmse']:.4f}, MAE: {result_lr['mae']:.4f}, R2: {result_lr['r2']:.4f}")
 
     # ===== XGBoost =====
     print("\n🔍 Training XGBoost...")
@@ -118,7 +93,7 @@ def get_best_model(X_train, y_train, X_test, y_test, X_val=None, y_val=None):
 
     plot_actual_vs_predicted(y_test, y_pred_xgb, "XGBoost")
     candidates.append(("XGBoost", model_xgb, rmse_xgb, mae_xgb, r2_xgb))
-
+    print(f"   → RMSE: {rmse_xgb:.4f}, MAE: {mae_xgb:.4f}, R2: {r2_xgb:.4f}")
 
     # ===== XGBoost Tuning=====
     print("\n🔍 Training XGBoost (Tuning)...")
@@ -141,7 +116,8 @@ def get_best_model(X_train, y_train, X_test, y_test, X_val=None, y_val=None):
 
     # Simpan kandidat
     candidates.append(("XGBoost (Tuning)", model_xgb_tuned, rmse_xgb_tuned, mae_xgb_tuned, r2_xgb_tuned))
-
+    print(f"   → RMSE: {rmse_xgb_tuned:.4f}, MAE: {mae_xgb_tuned:.4f}, R2: {r2_xgb_tuned:.4f}")
+    
     # ===== LightGBM =====
     print("\n🔍 Training LightGBM...")
     model_lgbm = train_lightgbm(X_train, y_train, X_val, y_val)
@@ -160,6 +136,7 @@ def get_best_model(X_train, y_train, X_test, y_test, X_val=None, y_val=None):
 
     plot_actual_vs_predicted(y_test, y_pred_lgbm, "LightGBM")
     candidates.append(("LightGBM", model_lgbm, rmse_lgbm, mae_lgbm, r2_lgbm))
+    print(f"   → RMSE: {rmse_lgbm:.4f}, MAE: {mae_lgbm:.4f}, R2: {r2_lgbm:.4f}")
 
 
     # ===== LightGBM Tuning =====
@@ -180,7 +157,7 @@ def get_best_model(X_train, y_train, X_test, y_test, X_val=None, y_val=None):
 
     plot_actual_vs_predicted(y_test, y_pred_lgbm_tuned, "LightGBM (Tuning)")
     candidates.append(("LightGBM (Tuning)", model_lgbm_tuned, rmse_lgbm_tuned, mae_lgbm_tuned, r2_lgbm_tuned))
-
+    print(f"   → RMSE: {rmse_lgbm_tuned:.4f}, MAE: {mae_lgbm_tuned:.4f}, R2: {r2_lgbm_tuned:.4f}")
 
     # ===== Pilih best model =====
     best = min(candidates, key=lambda x: x[2])
