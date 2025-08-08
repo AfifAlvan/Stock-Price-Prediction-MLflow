@@ -27,3 +27,6 @@ def get_data(ticker, start="2020-01-01", end="2025-08-01"):
     print(f"Data untuk {ticker} telah disimpan di {file_path}")
 
     return data
+
+if __name__ == "__main__":
+    get_data("BBCA.JK")

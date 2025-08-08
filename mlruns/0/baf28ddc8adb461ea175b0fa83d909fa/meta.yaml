@@ -1,0 +1,14 @@
+artifact_uri: file:///C:/Test%20Kerja/Avows%20Technologies/mlruns/0/baf28ddc8adb461ea175b0fa83d909fa/artifacts
+end_time: 1754655220868
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: baf28ddc8adb461ea175b0fa83d909fa
+run_name: BBCA_Forecast
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1754655169902
+status: 3
+tags: []
+user_id: afifa

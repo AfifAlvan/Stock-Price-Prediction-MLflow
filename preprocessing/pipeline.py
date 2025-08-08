@@ -49,13 +49,25 @@ def load_and_prepare_data(
         print(f"✅ Train: {X_train.shape}, Test: {X_test.shape}")
         return X_train, y_train, X_test, y_test
     
-def generate_features(df, lags=[1, 2, 3], rolling_windows=[5, 10]):
-    """
-    Bersihkan dan buat fitur dari dataframe mentah (misal: data terbaru untuk prediksi ke depan).
-    """
+# def generate_features(df, lags=[1, 2, 3], rolling_windows=[5, 10]):
+#     """
+#     Bersihkan dan buat fitur dari dataframe mentah (misal: data terbaru untuk prediksi ke depan).
+#     """
+#     from preprocessing.cleaner import cleaning
+#     from preprocessing.feature_engineer import create_features
+
+#     cleaned = cleaning(df)
+#     features = create_features(cleaned, lags=lags, rolling_windows=rolling_windows)
+#     return features
+
+def generate_features(df, lags=[1, 2, 3], rolling_windows=[5, 10], clean=True, verbose=True):
     from preprocessing.cleaner import cleaning
     from preprocessing.feature_engineer import create_features
 
-    cleaned = cleaning(df)
+    if clean:
+        cleaned = cleaning(df, verbose=verbose)
+    else:
+        cleaned = df.copy()
+
     features = create_features(cleaned, lags=lags, rolling_windows=rolling_windows)
     return features
